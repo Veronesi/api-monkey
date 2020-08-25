@@ -13,7 +13,7 @@ service.getResource = (req, res) => {
             resource,
             [resource]: req.resources[resource]
         })
-    }, 5000)
+    }, 500)
 }
 
 service.getOneResource = (req, res) => {
@@ -27,7 +27,7 @@ service.getOneResource = (req, res) => {
             id,
             [resource]: count <= id ? req.resources[resource][1] : req.resources[resource][id]
             //[resource]: req.resources[resource][c1] ? req.resources[resource][c1] : {}
-        }, 5000)
+        }, 500)
     })
 }
 
@@ -37,7 +37,7 @@ service.patch = (req, res) => {
             success: true,
             body: req.body
         })
-    }, 1000);
+    }, 500);
 }
 
 service.post = (req, res) => {
@@ -46,7 +46,7 @@ service.post = (req, res) => {
             success: true,
             body: req.body
         })
-    }, 1000);
+    }, 500);
 
 }
 
